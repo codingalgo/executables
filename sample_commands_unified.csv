@@ -1,0 +1,8 @@
+command,expected_response,wait_time,case_sensitive,test_type
+show version,version,2,false,positive
+show status,ready,2,false,positive
+ping,pong,1,false,positive
+invalid_command,error,2,false,negative
+bad_cmd,unknown,2,false,negative
+reset,,3,false,neutral
+reboot,,4,false,neutral

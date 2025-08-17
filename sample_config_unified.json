@@ -1,0 +1,58 @@
+{
+  "connection": {
+    "port": "/dev/ttyUSB0",
+    "baud_rate": 115200,
+    "timeout": 2
+  },
+  "commands": [
+    {
+      "command": "show version",
+      "expected_response": "version",
+      "wait_time": 2,
+      "case_sensitive": false,
+      "test_type": "positive"
+    },
+    {
+      "command": "show status",
+      "expected_response": "ready",
+      "wait_time": 2,
+      "case_sensitive": false,
+      "test_type": "positive"
+    },
+    {
+      "command": "ping",
+      "expected_response": "pong",
+      "wait_time": 1,
+      "case_sensitive": false,
+      "test_type": "positive"
+    },
+    {
+      "command": "invalid_command",
+      "expected_response": "error",
+      "wait_time": 2,
+      "case_sensitive": false,
+      "test_type": "negative"
+    },
+    {
+      "command": "bad_cmd",
+      "expected_response": "unknown",
+      "wait_time": 2,
+      "case_sensitive": false,
+      "test_type": "negative"
+    },
+    {
+      "command": "reset",
+      "expected_response": "",
+      "wait_time": 3,
+      "case_sensitive": false,
+      "test_type": "neutral"
+    },
+    {
+      "command": "reboot",
+      "expected_response": "",
+      "wait_time": 4,
+      "case_sensitive": false,
+      "test_type": "neutral"
+    }
+  ]
+}

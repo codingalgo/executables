@@ -1,0 +1,9 @@
+command,expected_response,wait_time,case_sensitive,test_type
+show version,version,2,false,positive
+show status,ready,2,false,positive
+show registration,registered,2,false,positive
+ping,pong,1,false,positive
+test,ok,1,false,positive
+invalid_command,error,2,false,negative
+bad_syntax,syntax error,2,false,negative
+reboot,,3,false,neutral
